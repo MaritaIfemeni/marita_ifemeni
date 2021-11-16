@@ -1,0 +1,23 @@
+﻿<Window x:Class="FinalProject.Sent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="Sent" Height="450" Width="800">
+    <Grid Background="#FFFFD5B2">
+        <Label Content="Parkkkitiedot lähetetty onnistuneesti!" BorderBrush="red" BorderThickness="2" Canvas.Left="150" Canvas.Top="10" FontFamily="Simplex" FontSize="18" FontWeight="Bold" Margin="74,24,274.333,352.667"/>
+        <Label Content="&#xA;&#x9;&#x9;            Henkilölle:&#xA;&#xA;&#xA;&#x9;&#x9; Puhelinnumeroon:&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;Paikkaan:&#xA;&#xA;&#xA;&#x9;&#x9;&#x9;    Ajalle:" HorizontalAlignment="Left" Height="243" Margin="25,68,0,0" VerticalAlignment="Top" Width="276" FontFamily="Siplex" FontSize="16"/>
+        <TextBlock x:Name="name" HorizontalAlignment="Left" Height="31" Margin="350,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278"/>
+        <TextBlock x:Name="num" HorizontalAlignment="Left" Height="31" Margin="350,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278"/>
+        <TextBlock x:Name="place" HorizontalAlignment="Left" Height="31" Margin="350,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278"/>
+        <TextBlock x:Name="time" HorizontalAlignment="Left" Height="31" Margin="350,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278"/>
+        <Canvas x:Name="MainCanvas">
+
+        </Canvas>
+        <Button x:Name="Press" Content="Sulje ikkuna" VerticalAlignment="Bottom" Click="Press_Click" Margin="580,0,48.333,56.667" Height="34" FontFamily="Simplex" FontWeight="Bold" Background="#FF158261" FontStyle="Italic"/>
+        <Button x:Name="save" Content="Tallenna Tiedot" VerticalAlignment="Bottom" Click="Save_Click" Margin="382,0,246.333,56.667" Height="34" FontFamily="Simplex" FontWeight="Bold" Background="#FF158261" FontStyle="Italic"/>
+
+    </Grid>
+</Window>

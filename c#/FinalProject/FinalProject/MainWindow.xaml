@@ -1,0 +1,44 @@
+﻿<Window x:Class="FinalProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="490" Width="785">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Background="Aquamarine" Height="40px" FontSize="20" FontFamily="Impact">
+            <MenuItem Header="_Tyhjennä" Click="MenuItem_Click_1"/>
+            <MenuItem Header="_Käytä laskinta" Click="MenuItem_Click_2"/>
+
+            <MenuItem Header="_Google Maps" Click="MenuItem_Click_3"/>
+            <MenuItem Header="_Sulje" Click="MenuItem_Click"/>
+        </Menu>
+        <Grid Background="Honeydew" Margin="0,0,0,-0.333" Width="782">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="376*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Luo ja lähetä parkkiluvat jo ennen vierailijasi &#xD;&#xA;saapumista nopeasti ja kivuttomasti täältä!" BorderBrush="Aquamarine" BorderThickness="2" HorizontalAlignment="Left" Height="71" Margin="11.333,26,0,0" VerticalAlignment="Top" Width="571" FontSize="20" Cursor="None" FontFamily="Simplex" FontWeight="Bold" Grid.Column="1"/>
+            <Label Content="Mille parkkialueelle haluat &#xD;&#xA;luvan myöntää:" HorizontalAlignment="Left" Height="50" Margin="11.333,116,0,0" VerticalAlignment="Top" Width="237" FontStyle="Italic" FontSize="14" FontFamily="Simplex" FontWeight="Bold" Grid.Column="1"/>
+            <Label Content="Aloitus pvm:" HorizontalAlignment="Left" Margin="11.333,195,0,0" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.659,0.423" FontFamily="Simplex" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+            <DatePicker x:Name="startDate" HorizontalAlignment="Left" Margin="145.333,199,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.594,-1.158" Grid.Column="1"/>
+            <Label Content="Lopetus pvm:" HorizontalAlignment="Left" Margin="261.333,195,0,0" VerticalAlignment="Top" Width="130" FontFamily="Simplex" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+            <DatePicker x:Name="endDate" HorizontalAlignment="Left" Margin="430.333,199,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.594,-1.158" Grid.Column="1"/>
+            <CheckBox x:Name="Kauniainen" Content="Kauniaisten Terveysasema" HorizontalAlignment="Left" Margin="261.333,123,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="kauniainen_Checked"/>
+            <CheckBox x:Name="Kalasatama" Content="Kalasataman Terveysasema" HorizontalAlignment="Left" Margin="430.333,123,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="kalasatama_Checked"/>
+            <CheckBox x:Name="Vihti" Content="Vihdin Terveysasema" HorizontalAlignment="Left" Margin="261.333,150,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="vihti_Checked"/>
+            <CheckBox x:Name="Vuosaari" Content="Vuosaaren Terveysasema" HorizontalAlignment="Left" Margin="430.333,150,0,0" VerticalAlignment="Top" Grid.Column="1" Checked="vuosaari_Checked"/>
+            <Label Content="Luvan saajan etunimi:" HorizontalAlignment="Left" Margin="11.333,252,0,0" VerticalAlignment="Top" Width="189" RenderTransformOrigin="0.659,0.423" FontFamily="Simplex" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+            <Label Content="Luvan saajan sukunimi:" HorizontalAlignment="Left" Margin="11.333,290,0,0" VerticalAlignment="Top" Width="217" RenderTransformOrigin="0.659,0.423" FontFamily="Simplex" FontWeight="Bold" FontSize="14" Grid.Column="1"/>
+            <Label Content="Puhelin numero:" HorizontalAlignment="Left" Margin="11.333,338,0,0" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.659,0.423" FontFamily="Simplex" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+            <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="26" Margin="272.333,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Grid.Column="1"/>
+            <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="26" Margin="272.333,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" Grid.Column="1"/>
+            <TextBox x:Name="phoneNum" HorizontalAlignment="Left" Height="26" Margin="272.333,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="261" Grid.Column="1"/>
+            <Button Content="Lähetä" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" Margin="618.333,278,0,0" FontFamily="Simplex" FontWeight="Bold" Height="24" Background="#FF158261" Grid.Column="1" Click="Button_Click"/>
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="618.333,26,0,0" Source="https://www.parkcenter.bg/upload/show/3953" Grid.Column="1"/>
+            <TextBox x:Name="sentWarning" Grid.Column="1" BorderBrush="Honeydew" Background="Honeydew" HorizontalAlignment="Left" Height="48" Margin="618,319,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83"/>
+            <Canvas x:Name="MainCanvas"/>
+        </Grid>
+    </DockPanel>
+</Window>

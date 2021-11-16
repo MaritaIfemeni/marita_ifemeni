@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Jari ja Taika</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <div class="header">
+     </div>
+
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </span>
+        <ul class="main-nav" id="js-menu">
+            <li><a href="index.html" class="menulink">Etusivu</a></li>
+            <li><a href="playlists.html" class="menulink">Ohjelmisto</a></li>
+            <li><a href="order.html" class="menulink" >Tilaukset</a></li>
+            <li><a href="about.html" class="menulink">Tietoa meistä</a></li>
+            <li><a href="gallery.html" class="menulink">Galleria</a></li>
+        </ul>
+    </nav>
+
+    <div class="container_1">
+        <section class="info">
+            <h2>Tilaa Jari & Taika-yhtye viihdyttämään juhlaan kuin juhlaan</h2>
+                <h3>Kesä painoittesta keikkailua</h3>
+                    <p>Yhtyeen esiintymiset painottuvat yleensä kesäaikaan, jolloin olemme usein soittamassa häissä, synttäreillä, lavatansseissa ja kesäjuhlilla.Toinen sesonkiaika on marras-joulukuussa, jolloin pidetään paljon mm. pikkujouluja ja peijaisia. 
+                    <br>Koska lähes kaikilla yhtyeen jäsenillä on päiväsaikaan muita töitä, ei keikkoja ole koskaan pyrittykään hankkimaan kovin paljoa - lähinnä on soitettu ne,joita on kysytty, aktiivisen markkinoinnin jäädessä enemmän lehti-ilmoittelun ja www-sivujen varaan. 
+                    <br>Pääasiassa keikkailemme Turku-Tampere-Helsinki -kolmiossa, mutta aina silloin tällöin kutsu käy kauemmaskin.
+                    </p>
+                <h3><a href="https://www.youtube.com/channel/UCLMNU03yU-pUbB1HEtFAFqQ" class="contactlink">Kuuntele musiikkiamme tästä!</a></h3>
+                <h3>Voit tilata meidät:</h3>
+                <ul>
+                    <li>Tanssilavoille</li>
+                    <li>Kesäjuhliin</li>
+                    <li>Häihin</li>
+                    <li>Pikkujouluihin ja peijaisiin</li>
+                    <li>Ravintoloihin ja terasseille</li>
+                    <li>Synttäreille</li>
+                </ul>
+                    <b>Lisäksi tulemme minne tahansa, missä kaivataan musiikkia piristämään menoa tai ylläpitämään leppoisaa tunnelmaa.</b><br>
+                <h3><a href="playlists.html" class="contactlink">Katso ohjelmistomme tästä!</a></h3>
+                <h2 id="contactdetails">Yhteystiedot</h2>
+                    <p>Sähköposti: <a href="mailto:jarijataika@example.com" style="color:black; text-decoration:none">jarijataika@example.com</a></p>
+                    <p>Puhelinnumero: 00000000000</p>
+                    <p>Laskutus osoite: Taikakatu 10, 11100 Jarin Taikamaa</p>
+        </section>
+
+        <section class="aside">
+                <b>Ota yhteyttä alla olevalla lomakkeella!</b><br><br>
+                <div class="container">
+                    <form action="sentform.html">
+                  
+                      <label for="name">Nimi</label>
+                      <input type="text" id="name" name="name" placeholder="Kirjoita nimesi tähän..">
+                  
+                      <label for="email">Sähköposti</label>
+                      <input type="text" id="email" name="email" placeholder="Kirjoita sähköpostiosoitteesi tähän..">
+                        
+                      <label for="pnumber">Puhelinnumero</label>
+                      <input type="text" id="pnumber" name="pnumber" placeholder="Kirjoita puhelinnumerosi tähän..">
+
+                      <label for="ohjelmisto">Valitse soitettava ohjelmisto</label>
+                      <select id="ohjelmisto" name="ohjelmisto">
+                        <option value="set1">Setti 1</option>
+                        <option value="set2">Setti 2</option>
+                        <option value="set3">Setti 3</option>
+                        <option value="ownset">Valitsen oman setin</option>
+                      </select>
+                  
+                      <label for="subject">Tarkempia tietoja</label>
+                      <textarea id="subject" name="subject" placeholder="Voit kirjoittaa lisätietoja tähän.." style="height:100px"></textarea>
+                  
+                      <input type="submit" value="Lähetä">
+                  
+                    </form>
+                  </div>
+            </section>
+    </div>
+
+    <footer class="footer">
+        <table class="footertable">
+            <tr>
+                <th><a href="order.html#contactdetails" class="contactlink">Yhteystiedot</a></th>
+                <th><a href="mailto:jarijataika@example.com"><img src="pics/mail.png" alt="Email logo" class="contactpic"></a></th>
+                <th><a href="https://www.facebook.com/JariTaika-191704827574713/"><img src="pics/faceb.png" alt="fb Logo" class="contactpic"></a></th>
+                <th><a href="https://open.spotify.com/artist/3AXzj9CsJxWYHX9IXtlFT2"><img src="pics/spotify.png" alt="Spotify logo" class="contactpic"></a></th>
+                <th><a href="https://www.youtube.com/channel/UCLMNU03yU-pUbB1HEtFAFqQ"><img src="pics/youtube.png" alt="yout logo" class="contactpic"></a></th>
+            </tr>
+        </table>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

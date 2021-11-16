@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harjoitus 4</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<title>Harjoitus 4</title>
+<body>
+  <h2>Web Ojelmointi, Harjoitus 4</h2>
+
+  <div class="container">
+    <form onsubmit="event.preventDefault(); getResult();">
+      <div class="row">
+        <div class="col-25">
+          <label for="fullname">Full Name:</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fullname" name="fullname" placeholder="First Name Last Name.." size="60" maxlength="80" required autofocus>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="pword1">Password:</label>
+        </div>
+        <div class="col-75">
+          <input type="password" id="pword1" name="password" minlength="8" maxlength="20" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[_,.\-:;?!]).{8,20}$" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="pword2">Password Again:</label>
+        </div>
+        <div class="col-75">
+            <input type="password" id="pword2" name="password" minlength="8" maxlength="20" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[_,.\-:;?!]).{8,20}$" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="gender">Gender:</label>
+        </div>
+        <div class="col-75">
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="hobbies">Hobbies:</label>
+        </div>
+        <div class="col-75">
+          <input type="checkbox" name="hobby" value="Games">
+          <label for="games">Games</label>
+          <input type="checkbox" name="hobby" value="Music">
+          <label for="music">Music</label>
+          <input type="checkbox" name="hobby" value="sport">
+          <label for="sport">Sport</label>
+          <input type="checkbox" name="hobby" value="TV">
+          <label for="tv">TV</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="birth">Birth Date:</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="birthday" name="birthday">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="height">Height:</label>
+        </div>
+          <div class="col-75">
+            <input type="range" min="40" max="300" class="height" id="height">
+            <label class="heightvalue" for="heightvalue"><span id="heightvalue"></span></label>
+            <!--<input class="height" type="range" id="height" name="points" min="40" max="300">
+            <label class="heightvalue" for="heightvalue"><span id="heightvalue"></span></label> -->
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="color">Favorite colour:</label>
+        </div>
+        <div class="col-75">
+          <input type="color" id="favcolor" name="favcolor">
+        </div>
+      </div>
+      <div class="row">
+       <div class="col-25">
+        <label for="country">Home country:</label>
+       </div> 
+        <div class="col-75">
+          <select id="country" name="country">
+            <option value="Finland">Finland</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Russia">Russia</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Norway">Norway</option>
+          </select>  
+        </div>
+      </div>
+      <div class="row">
+       <div class="col-25">
+         <label for="job">Profession:</label>
+       </div>
+       <div class="col-75">
+          <select id="job" name="job">
+            <option value="Dentist">Dentist</option>
+            <option value="Dental Hygienist">Dental Hygienist</option>
+            <option value="Dental Nurse">Dental Nurse</option>
+            <option value="Dental Technician">Dental Technician</option>
+            <option value="Oral Surgeon">Oral Surgeon</option>
+          </select>  
+        </div>
+      </div>
+      <div class="row">
+       <div class="col-25">
+         <label for="message">Message:</label>
+       </div>
+       <div class="col-75">
+          <textarea id="message" name="message" rows="6" cols="60" placeholder="Write message. Max 1000 characters..." maxlength="1000"></textarea> </textarea>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="send">Print results below pressing:</label>
+        </div>
+          <div class="col-75">
+            <input type="submit" value="submit">
+        </div>
+       </div>
+    </form>
+  </div>
+  <div class="container" id="resultbox">
+    <h4>Here is what you filled in:</h4>
+    <output id="result"></output>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
