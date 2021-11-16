@@ -1,3 +1,3 @@
-# marita_ifemeni
+# Marita Ifemeni
 
 Random school assignments
