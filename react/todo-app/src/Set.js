@@ -9,7 +9,12 @@ const Set = () => {
     }
     return (
         <>
-     
+        <form>
+            <label>Enter your task that needs to be complited:
+            < input type="text" />
+            </label>
+        </form>
+
         <div>
           Todoes: {todos}
           <button onClick={add}>Add Task To Do</button>
