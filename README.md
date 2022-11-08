@@ -1,3 +1,3 @@
 # Marita Ifemeni
 
-Random school assignments
+Random school assignments and own projects
