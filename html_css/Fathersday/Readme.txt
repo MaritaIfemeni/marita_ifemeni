@@ -1,4 +1,4 @@
-Thanks for downloading this template!
+Fatherday greeting made using:
 
 Template Name: MyResume
 Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
