@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import Message from "./Message";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count - 1)}>-</button>
       <button onClick={() => setCount(0)}>Clear</button>
+      <Message message="Hello" />
     </div>
   );
 }
