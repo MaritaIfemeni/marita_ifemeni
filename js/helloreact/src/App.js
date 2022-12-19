@@ -1,11 +1,10 @@
 
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <h1>Welcome to my site</h1>
-      <p>This is my first React app</p>
+      Hello World {props.firstname} {props.lastname}
     </div>
   );
 }
