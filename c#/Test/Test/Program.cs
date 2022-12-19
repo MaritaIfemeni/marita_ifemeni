@@ -1,51 +1,50 @@
-﻿using System;
+﻿
+using System;
 
-namespace Test
-{
-    class Program
+namespace Test {
+    // Returns true if the string is pangram else false
+    bool checkPangram(string& str)
     {
-        static void TestMethod() {
-            Console.OutputEncoding = System.Text.UTF8Encoding.UTF8;
-            Console.InputEncoding = System.Text.UTF8Encoding.UTF8;
-
-            int iKoenumero;
-            Console.WriteLine("Trying to remember dow do you write C#?");
-            Console.Write("Anna koenumerosi välillä 4-10: ");
-            iKoenumero = int.Parse(Console.ReadLine());
-
-          
-            if (iKoenumero == 9 || iKoenumero == 10)
-            {
-                Console.WriteLine("Hyvä!");
-            }
-
-            else if (iKoenumero == 7 || iKoenumero == 8)
-            {
-                Console.WriteLine("Kelpo!");
-            }
-
-            else if (iKoenumero == 5 || iKoenumero == 6)
-            {
-                Console.WriteLine("Tyydyttävä!");
-            }
-
-            else if (iKoenumero == 4)
-            {
-                Console.WriteLine("Heikko!");
-            }
-
-            else
-            {
-                Console.WriteLine("Et antanut arvosanaa väliltä 4-10!");
-            }
-
-            
-
-        }
-        static void Main(string[] args)
+        // Create a hash table to mark the characters
+        // present in the string
+        vector<bool> mark(26, false);
+        // For indexing in mark[]
+        int index;
+        // Traverse all characters
+        for (int i = 0; i < str.length(); i++)
         {
-            
-            TestMethod();
+            // If uppercase character, subtract 'A'
+            // to find index.
+            if ('A' <= str[i] && str[i] <= 'Z')
+                index = str[i] - 'A';
+            // If lowercase character, subtract 'a'
+            // to find index.
+            else if ('a' <= str[i] && str[i] <= 'z')
+                index = str[i] - 'a';
+            // If this character is other than english
+            // lowercase and uppercase characters.
+            else
+                continue;
+            mark[index] = true;
         }
+
+        // Return false if any character is unmarked
+        for (int i = 0; i <= 25; i++)
+            if (mark[i] == false)
+                return (false);
+        // If all characters were present
+        return (true);
+    }
+
+    // Driver Program to test above functions
+    int main()
+    {
+        string str = "The quick brown fox jumps over the"
+                     " lazy dog";
+        if (checkPangram(str) == true)
+            printf(" %s \nis a pangram", str.c_str());
+        else
+            printf(" %s \nis not a pangram", str.c_str());
+        return (0);
     }
 }

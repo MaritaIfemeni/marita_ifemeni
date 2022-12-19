@@ -2,8 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.Test PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Test/Program.cs">
     <Files>
-      <File FileName="Test/Program.cs" Line="28" Column="14" />
-      <File FileName="Test/EmptyCSharpFile.cs" />
+      <File FileName="Test/Program.cs" Line="10" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,9 +20,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/maritaifemeni/marita_ifemeni/c#/Test/Test/Program.cs" relfile="Test/Program.cs" line="50" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

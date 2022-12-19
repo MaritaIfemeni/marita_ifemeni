@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5QHyOiddTieK8kGt7FUVsTBuV+lome3ICVocBb60zUzbGqO6obnM6qC4cSqOnscZUxbsXyP3usOKz5QgtaIEcw==",
+  "dgSpecHash": "U5r4erz75p/1u/FW/qV7bKsHhyo7jWUR1nBPau9Z4ZNfoC91tu4olCrCV4/Y4apbiuIUDaZbbZG5KDlKaxwuAg==",
   "success": true,
   "projectFilePath": "/Users/maritaifemeni/marita_ifemeni/c#/Test/Test/Test.csproj",
-  "expectedPackageFiles": [
-    "/Users/maritaifemeni/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
