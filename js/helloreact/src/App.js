@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Message from "./Message";
 import Hello from "./Hello";
+import Userinput from './Userinput';
 
 function App() {
   const [count, setCount] = useState (0);
@@ -17,6 +18,7 @@ function App() {
       <button onClick={() => setCount(0)}>Clear</button>
       <Message message="Hello" />
       <Hello />
+      <Userinput />
     </div>
   );
 }
