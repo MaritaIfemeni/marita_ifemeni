@@ -8,9 +8,13 @@ function Multipleuserinput() {
     email: "",
   });
 
+  const showAlert = () => {
+    alert(`Hello ${person.firstname} ${person.lastname}`);
+  };
   const inputChanged = (event) => {
     setPerson({ ...person, [event.target.name]: event.target.value });
   };
+  
   return (
     <div>
       Name: {person.firstname} {person.lastname} Email: {person.email}
@@ -33,6 +37,7 @@ function Multipleuserinput() {
         value={person.email}
         onChange={inputChanged}
       />
+      <button onClick={showAlert}>Submit</button>
     </div>
   );
 }
