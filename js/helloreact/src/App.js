@@ -3,6 +3,7 @@ import './App.css';
 import Message from "./Message";
 import Hello from "./Hello";
 import Userinput from './Userinput';
+import Multipleuserinput from './Multipleuserinput';
 
 function App() {
   const [count, setCount] = useState (0);
@@ -19,6 +20,7 @@ function App() {
       <Message message="Hello" />
       <Hello />
       <Userinput />
+      <Multipleuserinput />
     </div>
   );
 }
