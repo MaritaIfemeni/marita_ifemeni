@@ -4,6 +4,7 @@ import Message from "./Message";
 import Hello from "./Hello";
 import Userinput from './Userinput';
 import Multipleuserinput from './Multipleuserinput';
+import Age from "./Age";
 
 function App() {
   const [count, setCount] = useState (0);
@@ -21,6 +22,7 @@ function App() {
       <Hello />
       <Userinput />
       <Multipleuserinput />
+      <Age />
     </div>
   );
 }
