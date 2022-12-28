@@ -12,7 +12,12 @@ function App() {
 
   const addTodo = () => {
     setTodos([...todos, todo]);
-    setTodo({description: '', date: ''}); // Clear todo
+    setTodo({ description: "", date: "" }); // Clear todo
+  };
+
+  const deleteTodo = (row) => {
+    console.log("Delete row: " + row);
+    setTodos(todos.filter((todo, index) => index !== row));
   };
 
   return (
@@ -36,6 +41,9 @@ function App() {
             <tr key={index}>
               <td>{todo.description}</td>
               <td>{todo.date}</td>
+              <td>
+                <button onClick={() => deleteTodo(index)}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>
