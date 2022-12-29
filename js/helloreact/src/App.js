@@ -6,6 +6,7 @@ import Userinput from './Userinput';
 import Multipleuserinput from './Multipleuserinput';
 import Age from "./Age";
 import Calculator from "./Calculator";
+import Registration from './Registration';
 
 function App() {
   const [count, setCount] = useState (0);
@@ -25,6 +26,7 @@ function App() {
       <Multipleuserinput />
       <Age />
       <Calculator />
+      <Registration />
     </div>
   );
 }
