@@ -5,6 +5,7 @@ import Hello from "./Hello";
 import Userinput from './Userinput';
 import Multipleuserinput from './Multipleuserinput';
 import Age from "./Age";
+import Calculator from "./Calculator";
 
 function App() {
   const [count, setCount] = useState (0);
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
       {count <= 10
       ? <p>You have pressed the button {count} times</p>
-      : <p>You have pressed the butto more than 10 times</p>
+      : <p>You have pressed the button more than 10 times</p>
       }
       <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count - 1)}>-</button>
@@ -23,6 +24,7 @@ function App() {
       <Userinput />
       <Multipleuserinput />
       <Age />
+      <Calculator />
     </div>
   );
 }
