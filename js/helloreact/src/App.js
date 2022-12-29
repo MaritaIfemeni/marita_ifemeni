@@ -8,6 +8,7 @@ import Age from "./Age";
 import Calculator from "./Calculator";
 import Registration from './Registration';
 import Nasa from './Nasa';
+import Users from './Users';
 
 function App() {
   const [count, setCount] = useState (0);
@@ -29,6 +30,7 @@ function App() {
       <Age />
       <Calculator />
       <Registration />
+      <Users />
     </div>
   );
 }
