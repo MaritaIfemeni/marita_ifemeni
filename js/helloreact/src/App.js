@@ -7,6 +7,7 @@ import Multipleuserinput from './Multipleuserinput';
 import Age from "./Age";
 import Calculator from "./Calculator";
 import Registration from './Registration';
+import Nasa from './Nasa';
 
 function App() {
   const [count, setCount] = useState (0);
@@ -20,6 +21,7 @@ function App() {
       <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count - 1)}>-</button>
       <button onClick={() => setCount(0)}>Clear</button>
+      <Nasa />
       <Message message="Hello" />
       <Hello />
       <Userinput />
