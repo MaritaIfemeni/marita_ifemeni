@@ -9,6 +9,7 @@ import Calculator from "./Calculator";
 import Registration from './Registration';
 import Nasa from './Nasa';
 import Users from './Users';
+import Userinputfetch from './Userinputfetch';
 
 function App() {
   const [count, setCount] = useState (0);
@@ -31,6 +32,7 @@ function App() {
       <Calculator />
       <Registration />
       <Users />
+      <Userinputfetch />
     </div>
   );
 }
