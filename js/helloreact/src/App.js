@@ -11,12 +11,14 @@ import Nasa from './Nasa';
 import Users from './Users';
 import Userinputfetch from './Userinputfetch';
 import Quiz from './Quiz';
+import Gitapi from './Gitapi';
 
 function App() {
   const [count, setCount] = useState (0);
 
   return (
     <div className="App">
+      <Gitapi />
       <Quiz />
       {count <= 10
       ? <p>You have pressed the button {count} times</p>
