@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import TodoTable from "./TodoTable";
+import "ag-grid-community/dist/styles/ag-grid.css";
+import "ag-grid-community/dist/styles/ag-theme-material.css";
+import ReactiveButton from 'reactive-button';
 
 function App() {
-  const [todo, setTodo] = useState({ description: "", date: "" });
-
+  const [todo, setTodo] = useState({ description: "", date: "", status: "" });
   const [todos, setTodos] = useState([]);
 
   const inputChanged = (event) => {
@@ -13,16 +15,12 @@ function App() {
 
   const addTodo = () => {
     setTodos([...todos, todo]);
-    setTodo({ description: "", date: "" }); // Clear todo
-  };
-
-  const deleteTodo = (row) => {
-    console.log("Delete row: " + row);
-    setTodos(todos.filter((todo, index) => index !== row));
+    setTodo({ description: "", date: "", status: "" });
   };
 
   return (
     <div className="App">
+      <br></br>
       <input
         placeholder="Description"
         name="description"
@@ -35,8 +33,16 @@ function App() {
         value={todo.date}
         onChange={inputChanged}
       />
+      <input
+        placeholder="Status"
+        name="status"
+        value={todo.status}
+        onChange={inputChanged}
+      />
       <button onClick={addTodo}>Add</button>
-      <TodoTable todos={todos} deleteTodo={deleteTodo} />
+      <div>
+        <TodoTable todos={todos} />
+      </div>
     </div>
   );
 }
