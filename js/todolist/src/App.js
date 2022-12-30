@@ -39,7 +39,7 @@ function App() {
         value={todo.status}
         onChange={inputChanged}
       />
-      <button onClick={addTodo}>Add</button>
+       <ReactiveButton color="yellow" onClick={addTodo}>Add</ReactiveButton>
       <div>
         <TodoTable todos={todos} />
       </div>
