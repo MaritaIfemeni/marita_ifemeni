@@ -10,12 +10,14 @@ import Registration from './Registration';
 import Nasa from './Nasa';
 import Users from './Users';
 import Userinputfetch from './Userinputfetch';
+import Quiz from './Quiz';
 
 function App() {
   const [count, setCount] = useState (0);
 
   return (
     <div className="App">
+      <Quiz />
       {count <= 10
       ? <p>You have pressed the button {count} times</p>
       : <p>You have pressed the button more than 10 times</p>

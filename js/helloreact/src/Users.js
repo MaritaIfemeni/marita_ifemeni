@@ -20,7 +20,7 @@ function Users() {
               <td>{user.first_name}</td>
               <td>{user.last_name}</td>
               <td>{user.email}</td>
-              <td><img alt="face" height="200px" src={user.avatar} /></td>
+              <td><img alt="face" height="100px" src={user.avatar} /></td>
             </tr>
           ))}
         </tbody>
