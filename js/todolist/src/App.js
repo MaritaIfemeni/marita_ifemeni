@@ -14,11 +14,11 @@ function App() {
       <BrowserRouter>
         <nav>
           <Link to="/">Home</Link>{" "}
-          <Link to="/About">To Do List</Link>{" "}
+          <Link to="/todolist">To Do List</Link>{" "}
         </nav>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/about" element={<Todolist />} />
+          <Route path="/todolist" element={<Todolist />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
