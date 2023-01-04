@@ -13,12 +13,14 @@ import Userinputfetch from './Userinputfetch';
 import Quiz from './Quiz';
 import Gitapi from './Gitapi';
 import Gitsearch from './gitsearch';
+import Router from './Router';
 
 function App() {
   const [count, setCount] = useState (0);
 
   return (
     <div className="App">
+      <Router />
       <Gitsearch />
       <Gitapi />
       <Quiz />
