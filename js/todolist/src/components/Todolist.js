@@ -3,7 +3,7 @@ import "../App.css";
 import TodoTable from "./TodoTable";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-material.css";
-import ReactiveButton from 'reactive-button';
+import ReactiveButton from "reactive-button";
 
 function Todolist() {
   const [todo, setTodo] = useState({ description: "", date: "", status: "" });
@@ -14,10 +14,12 @@ function Todolist() {
   };
 
   const addTodo = () => {
+    if (todo.description === "" || todo.date === "" || todo.status === "") {
+      return;
+    }
     setTodos([...todos, todo]);
     setTodo({ description: "", date: "", status: "" });
   };
-
 
   return (
     <div className="App">
@@ -40,7 +42,7 @@ function Todolist() {
         value={todo.status}
         onChange={inputChanged}
       />
-       <ReactiveButton color="yellow" onClick={addTodo}>Add</ReactiveButton>
+      <ReactiveButton idleText={"Add"} color={"yellow"} onClick={addTodo} />
       <div>
         <TodoTable todos={todos} />
       </div>

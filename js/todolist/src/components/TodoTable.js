@@ -2,16 +2,15 @@ import React from "react";
 import { AgGridColumn, AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-material.css";
-import ReactiveButton from 'reactive-button';
+import Delete from "./Delete";
 
 function TodoTable(props) {
   return (
     <div>
       <div
         className="ag-theme-material"
-        style={{ height: 600, width: 800, margin: "auto" }}
-        suppressRowDrag={false}
-      >
+        style={{ height: 600, width: 800, margin: "auto" }}>
+          
         <AgGridReact rowData={props.todos} animateRows={true}>
           <AgGridColumn
             field="description"
@@ -33,9 +32,10 @@ function TodoTable(props) {
           ></AgGridColumn>
           <AgGridColumn
             field="delete"
-            sortable={true}
-            filter={true}
+            sortable={false}
+            filter={false}
             lockPosition={true}
+            cellRenderer={Delete}
           ></AgGridColumn>
         </AgGridReact>
       </div>
