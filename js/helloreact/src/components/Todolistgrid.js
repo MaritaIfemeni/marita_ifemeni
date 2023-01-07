@@ -9,10 +9,10 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Tooltip from "@mui/material/Tooltip";
-import SaveIcon from '@mui/icons-material/Save';
+import SaveIcon from "@mui/icons-material/Save";
+import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 
-
-function Todolist() {
+function Todolistgrid() {
   const [todo, setTodo] = useState({ description: "", date: "" });
   const [todos, setTodos] = useState([]);
 
@@ -24,9 +24,16 @@ function Todolist() {
     setTodos([...todos, todo]);
   };
 
+  const newTodo = { ...todo, id: new Date() };
+
   const deleteTodo = (row) => {
     setTodos(todos.filter((todo, index) => index !== row));
   };
+
+  const columns: GridColDef[] = [
+    { field: 'col1', headerName: 'Column 1', width: 150 },
+    { field: 'col2', headerName: 'Column 2', width: 150 },
+  ];
 
   return (
     <div className="App">
@@ -67,14 +74,14 @@ function Todolist() {
               <td>{todo.description}</td>
               <td>{todo.date}</td>
               <td>
-              <Tooltip title="Delete Todo">
-                <IconButton
-                  size="small"
-                  color="error"
-                  onClick={() => deleteTodo(index)}
-                >
-                  <DeleteIcon />
-                </IconButton>
+                <Tooltip title="Delete Todo">
+                  <IconButton
+                    size="small"
+                    color="error"
+                    onClick={() => deleteTodo(index)}
+                  >
+                    <DeleteIcon />
+                  </IconButton>
                 </Tooltip>
               </td>
             </tr>
@@ -85,4 +92,4 @@ function Todolist() {
   );
 }
 
-export default Todolist;
+export default Todolistgrid;

@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Todolist from "./components/Todolist";
+import Todolistgrid from "./components/Todolistgrid";
 import NotFound from "./components/Notfound";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
@@ -21,6 +22,7 @@ function Router() {
                 <Link to="/">Home</Link> <Link to="/About">About</Link>{" "}
                 <Link to="/Contact">Contact</Link>{" "}
                 <Link to="/Todolist">To Do App</Link>{" "}
+                <Link to="/Todolistgrid">To Do App Grid</Link>{" "}
               </nav>
             </Typography>
           </Toolbar>
@@ -30,6 +32,7 @@ function Router() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/todolist" element={<Todolist />} />
+          <Route path="/todolistgrid" element={<Todolistgrid />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
