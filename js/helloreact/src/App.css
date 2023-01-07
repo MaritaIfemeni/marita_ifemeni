@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 3%;
 }
 
 .App-logo {
@@ -13,8 +14,21 @@
   }
 }
 
+.todo {
+  margin-top: 70px;
+}
+
+input {
+  margin-right: 5px;
+}
+
 table {
   margin: auto;}
+
+nav {
+  margin-top:5%;
+
+}
 
 .App-header {
   background-color: #282c34;
