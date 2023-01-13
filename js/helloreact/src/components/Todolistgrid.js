@@ -30,6 +30,12 @@ function Todolistgrid() {
     setTodos(todos.filter((todo, index) => index !== row));
   };
 
+  const rows: GridRowsProp = [
+    { id: 1, col1: 'Hello', col2: 'World' },
+    { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
+    { id: 3, col1: 'MUI', col2: 'is Amazing' },
+  ];
+
   const columns: GridColDef[] = [
     { field: 'col1', headerName: 'Column 1', width: 150 },
     { field: 'col2', headerName: 'Column 2', width: 150 },
@@ -39,7 +45,7 @@ function Todolistgrid() {
     <div className="App">
       <AppBar className="todo" position="static">
         <Toolbar>
-          <Typography variant="h6">My Todolist</Typography>
+          <Typography variant="h6">My Todolist Grid</Typography>
         </Toolbar>
       </AppBar>
       <Stack
