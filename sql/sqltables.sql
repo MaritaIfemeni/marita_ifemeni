@@ -12,3 +12,10 @@ values('Kauniasten terveyskeskus','Asematie 19, 02700 Kauniainen'),
 SELECT parking_area, address FROM Areas;
 
 SELECT * FROM Areas;
+
+CREATE TABLE Persons
+(
+   ID int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   fullname varchar(50) NOT NULL,
+   email_address varchar(200) NOT NULL,
+);

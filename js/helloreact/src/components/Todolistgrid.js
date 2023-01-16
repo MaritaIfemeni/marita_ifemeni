@@ -22,24 +22,17 @@ function Todolistgrid() {
 
   const addTodo = () => {
     setTodos([...todos, todo]);
-  };
+};
+    const newTodo = { ...todo, id: new Date() };
 
-  const newTodo = { ...todo, id: new Date() };
+    const rows: GridRowsProp = [
+      { id: newTodo, col1: todo.description, col2: newTodo.date },
+    ];
 
-  const deleteTodo = (row) => {
-    setTodos(todos.filter((todo, index) => index !== row));
-  };
-
-  const rows: GridRowsProp = [
-    { id: 1, col1: 'Hello', col2: 'World' },
-    { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
-    { id: 3, col1: 'MUI', col2: 'is Amazing' },
-  ];
-
-  const columns: GridColDef[] = [
-    { field: 'col1', headerName: 'Column 1', width: 150 },
-    { field: 'col2', headerName: 'Column 2', width: 150 },
-  ];
+    const columns: GridColDef[] = [
+      { field: "col1", headerName: "Column 1", width: 150 },
+      { field: "col2", headerName: "Column 2", width: 150 },
+    ];
 
   return (
     <div className="App">
@@ -73,27 +66,9 @@ function Todolistgrid() {
           Add
         </Button>
       </Stack>
-      <table>
-        <tbody>
-          {todos.map((todo, index) => (
-            <tr key={index}>
-              <td>{todo.description}</td>
-              <td>{todo.date}</td>
-              <td>
-                <Tooltip title="Delete Todo">
-                  <IconButton
-                    size="small"
-                    color="error"
-                    onClick={() => deleteTodo(index)}
-                  >
-                    <DeleteIcon />
-                  </IconButton>
-                </Tooltip>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div style={{ height: 300, width: "100%" }}>
+        <DataGrid rows={rows} columns={columns} />
+      </div>
     </div>
   );
 }
