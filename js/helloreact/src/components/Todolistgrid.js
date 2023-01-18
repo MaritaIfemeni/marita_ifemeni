@@ -22,17 +22,17 @@ function Todolistgrid() {
 
   const addTodo = () => {
     setTodos([...todos, todo]);
-};
-    const newTodo = { ...todo, id: new Date() };
+    setTodo({ description: "", date: "" }); // clear the textfields
+  };
 
-    const rows: GridRowsProp = [
-      { id: newTodo, col1: todo.description, col2: newTodo.date },
-    ];
+  const columns: GridColDef[] = [
+    { field: "description", headerName: "Description", width: 200 },
+    { field: "date", headerName: "Date", width: 200 },
+  ];
 
-    const columns: GridColDef[] = [
-      { field: "col1", headerName: "Column 1", width: 150 },
-      { field: "col2", headerName: "Column 2", width: 150 },
-    ];
+  const rows = todos.map((todo, index) => {
+    return { id: index, description: todo.description, date: todo.date };
+  });
 
   return (
     <div className="App">
@@ -66,8 +66,8 @@ function Todolistgrid() {
           Add
         </Button>
       </Stack>
-      <div style={{ height: 300, width: "100%" }}>
-        <DataGrid rows={rows} columns={columns} />
+      <div style={{ height: 300, width: "40%", margin: "auto" }}>
+        <DataGrid className="App" rows={rows} columns={columns} />
       </div>
     </div>
   );
