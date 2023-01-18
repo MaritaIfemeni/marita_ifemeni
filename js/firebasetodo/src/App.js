@@ -10,6 +10,7 @@ import AddTodo from './AddTodo';
 import './App.css';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-material.css';
+import Bookstore from './Bookstore';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -79,6 +80,7 @@ function App() {
           />      
         </AgGridReact>
       </div>
+      <Bookstore />
     </div>
   );
 }
