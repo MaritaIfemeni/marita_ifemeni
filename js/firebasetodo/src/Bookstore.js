@@ -10,6 +10,7 @@ import "./App.css";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-material.css";
 import { pink } from '@mui/material/colors';
+import AddBook from "./AddBook";
 
 function Bookstore() {
   const [books, setBooks] = useState([]);
@@ -71,6 +72,7 @@ function Bookstore() {
           </Typography>
         </Toolbar>
       </AppBar>
+      <AddBook addBook={addBook} />
       <div
         className="ag-theme-material"
         style={{ height: 400, width: 1200, margin: "auto" }}
