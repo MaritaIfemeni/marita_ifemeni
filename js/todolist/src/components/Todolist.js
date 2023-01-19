@@ -21,6 +21,11 @@ function Todolist() {
     setTodo({ description: "", date: "", status: "" });
   };
 
+// add clear all button that clears the table
+  const clearAll = () => {
+    setTodos([]);
+  };
+
   return (
     <div className="App">
       <br></br>
@@ -43,6 +48,7 @@ function Todolist() {
         onChange={inputChanged}
       />
       <ReactiveButton idleText={"Add"} color={"yellow"} onClick={addTodo} />
+      <ReactiveButton idleText={"Clear all"} color={"red"} onClick={clearAll} />
       <div>
         <TodoTable todos={todos} />
       </div>

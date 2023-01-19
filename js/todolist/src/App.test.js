@@ -9,6 +9,9 @@ test("renders todotable", () => {
   render(<TodoTable todos={row} />);
     const tableRow = screen.getByText('Go to coffee');
   expect(tableRow).toBeInTheDocument();
+//test that clear all button clears the table
+  fireEvent.click(screen.getByText('Clear all', { selector: 'button' })); 
+  expect(tableRow).not.toBeInTheDocument();
 })
 
 test('add todo',() => {
