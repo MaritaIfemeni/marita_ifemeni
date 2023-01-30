@@ -7,6 +7,8 @@
 
             function tervehdi() {
                 console.log("Moikka!");
+                var name = prompt("Enter your name");
+                document.getElementById("geek").innerHTML= name + " I am a Geek";
             }
             function lisaaPainike() {
                 var painike = document.createElement("button");
@@ -21,5 +23,6 @@
     <body>
         <p id="numero">Test</p>
         <button id="painike" onclick="lisaaPainike()">Paina tästä!</button>
+        <p id="geek"> GeeksforGeeks</p>
     </body>
 </html>
