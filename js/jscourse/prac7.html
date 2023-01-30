@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Harjoitus 7</title>
+        <script>
+function laskuNelio() {
+    var luku = document.getElementById("luku").value;
+    document.getElementById("tulos").innerHTML = "Luvun " + luku + " neliö on " + luku * luku;
+}
+        </script>
+    </head>
+    <body>
+    <input type="text" id="luku"></input>
+    <button id="painike" onclick="laskuNelio()">Paina tästä!</button>
+    <p id="tulos"></p>
+    </body>
+</html>

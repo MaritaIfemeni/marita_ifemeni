@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Harjoitus 6</title>
+        <script>
+            function laskuFunktio() {
+                var luku =noudaArvo("luku");
+                console.log(luku);
+                var eksp =noudaArvo("eksponentti");
+                console.log(eksp);
+                console.log("Luku " + luku + " potenssiin " + eksp + " on");
+                console.log(laskePotenssi(luku, eksp));
+            }
+
+            function noudaArvo(id) {
+                return document.getElementById(id).value;
+            }
+
+            function laskePotenssi(luku, eksp) {
+                if (eksp == 0) {
+                    return 1;
+                } else if (eksp < 0) {
+                    return 1 / laskePotenssi(luku, -eksp);
+                } else {
+                    return luku * laskePotenssi(luku, eksp - 1);
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="text" id="luku"></input>
+        <input type="text" id="eksponentti"></input>
+        <button id="painike" onclick="laskuFunktio()">Paina tästä!</button>
+    </body>
+</html>
