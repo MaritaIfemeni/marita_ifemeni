@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Harjoitus 1</title>
+        <script>
+            function laskeNelio() {
+                var numero = document.getElementById("numero").innerHTML;
+                var painike = document.getElementById("painike");
+                console.log(`Luvun ${numero} neliö on ${numero * numero}`);
+            }
+        </script>
+    </head>
+    <body>
+        <p id="numero">5</p>
+        <button id="painike" onclick="laskeNelio()">Paina tästä!</button>
+    </body>
+</html>
