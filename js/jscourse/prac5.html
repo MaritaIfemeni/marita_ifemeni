@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Harjoitus 5</title>
+        <script>
+
+            function tervehdi() {
+                console.log("Moikka!");
+            }
+            function lisaaPainike() {
+                var painike = document.createElement("button");
+                painike.id = "luotuPainike";
+                var teksti = document.createTextNode("Tervehdi tästä!");
+                painike.appendChild(teksti);
+                document.body.appendChild(painike);
+                painike.addEventListener("click", tervehdi);
+            }
+        </script>
+    </head>
+    <body>
+        <p id="numero">Test</p>
+        <button id="painike" onclick="lisaaPainike()">Paina tästä!</button>
+    </body>
+</html>
