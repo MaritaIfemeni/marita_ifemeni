@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Harjoitus 13</title>
+    <script>
+
+var luvut = [];
+function lisaaLuku() {
+  var luku = document.getElementById("luku").value;
+  luvut.push(luku);
+}
+function tulostaTiedot() {
+  var summa = 0;
+  for (var i = 0; i < luvut.length; i++) {
+    summa += parseInt(luvut[i]);
+  }
+  var keskiarvo = summa / luvut.length;
+  console.log(
+    "Taulukossa on " +
+      luvut.length +
+      " arvoa. \n Lukujen keskiarvo on " +
+      keskiarvo
+  );
+}
+    </script>
+  </head>
+  <body>
+    <p id="luku">5</p>
+    <button type="button" onclick="lisaaLuku()">Lisää luku</button>
+    <button type="button" onclick="tulostaTiedot()">Tulosta luvut</button>
+    <p id="tulos"></p>
+  </body>
+</html>

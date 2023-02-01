@@ -93,3 +93,19 @@
 
     var sum = 0.1 + 0.7
     console.log(sum)
+
+
+
+
+
+
+
+            //create function called tulostaLuvut that prints out the array lenght and the average of the numbers in the array
+            function tulostaTiedot() {
+              var summa = 0;
+              for (var i = 0; i < luvut.length; i++) {
+                  summa += luvut[i];
+              }
+              var keskiarvo = summa / luvut.length;
+              document.getElementById("tulos").innerHTML = "Taulukossa on " + luvut.length + " arvoa. \n Lukujen keskiarvo on " + keskiarvo;
+          }
