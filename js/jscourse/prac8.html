@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Harjoitus 1</title>
+    <script>
+      var a = 6;
+      function test() {
+        var a = 7;
+        function again() {
+          var a = 8;
+          alert(a); // A
+        }
+        console.log(again()); // B
+        console.log(a); // C
+        again();
+        alert(a); // B
+      }
+
+      function getFunc() {
+        var a = 7;
+        return function (b) {
+          alert(a + b);
+        };
+      }
+      var f = getFunc();
+      f(5);
+    </script>
+  </head>
+  <body>
+    <button onclick="test()">Paina tästä!</button>
+    <button onclick="again()">Paina tästä!</button>
+    <button onclick="alert(a)">Paina tästä!</button>
+    <button onclick="f(5)">Paina tästä!</button>
+  </body>
+</html>

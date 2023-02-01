@@ -47,3 +47,35 @@ const nelio = function(x) {
       }
 
       jokuFunktio();
+
+      function fun() {
+        var a = 10;
+        if(a > 5) {
+            a = 7;
+        }
+        
+        console.log(a);
+    }
+  fun();
+  function funfun() {
+    if(true) {
+        var a = 5;
+    }
+    console.log(a);
+}
+funfun();
+
+var a = 5;
+function first() {
+    a = 6;
+}
+
+function second() {
+    console.log(a);
+}
+
+first();
+second();
+
+
+
