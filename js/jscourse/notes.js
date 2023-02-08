@@ -50,8 +50,6 @@
       henkilo.driver = ((henkilo.ika >=18) ? 'Yes' : 'No');
       console.log(henkilo.driver);
 
-
-
     var muuttuja = 5
     console.log("Muuttujan arvo on:" + muuttuja)
 
@@ -109,3 +107,13 @@
               var keskiarvo = summa / luvut.length;
               document.getElementById("tulos").innerHTML = "Taulukossa on " + luvut.length + " arvoa. \n Lukujen keskiarvo on " + keskiarvo;
           }
+
+          var arrayyyy = [1,2,3,4,5,"jaa",7,8,"joo",10]
+          function tulostaTaulukko() {
+              var tulos = "";
+              for (var i = 0; i < arrayyyy.length; i++) {
+                  tulos += arrayyyy[i] + " ";
+              }
+              console.log(tulos);
+          }
+          tulostaTaulukko();
