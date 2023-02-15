@@ -1,5 +1,3 @@
-// make regex usin /abc|xyz/
-//  and then use it in match method
 
 var testi = "abbcccdddd"
 
@@ -15,3 +13,9 @@ var pattern = /\d+/g;
 
 console.log(pattern.test(text));  
 System.out.console.log(Pattern.matches("[amn]", "abcd"));
+
+function myFunction(...params) {
+    params.forEach(param => console.log(param));
+  }
+
+ myFunction("Hello", "World", "John");
