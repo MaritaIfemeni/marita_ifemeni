@@ -27,3 +27,12 @@ function descendingOrder(n){
 
 console.log(descendingOrder(-3));
 
+function isIsogram(str){
+    let arr = str.toLowerCase().split('');
+    let result = arr.filter((item, index) => arr.indexOf(item) === index);
+    return result.length === arr.length;
+}
+
+
+console.log(isIsogram("Dermatoglyphics"));
+console.log(isIsogram("liiza"));
