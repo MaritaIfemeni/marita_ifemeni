@@ -36,3 +36,34 @@ function isIsogram(str){
 
 console.log(isIsogram("Dermatoglyphics"));
 console.log(isIsogram("liiza"));
+
+
+  function squareDigits(num){
+    let arr = num.toString().split('');
+    for (let i = 0; i < arr.length; i++) 
+    arr[i] = Math.pow(arr[i], 2) ;
+    console.log("mitä tässä" + arr);
+    return Number(arr.join(''));
+  }
+
+    console.log(squareDigits(91));
+    console.log(squareDigits(777))
+    
+    
+    function sumTwoSmallestNumbers(numbers) {  
+      let numberArr = numbers.sort((a, b) => a - b);
+      return numberArr[0] + numberArr[1]
+    }   
+
+    console.log(sumTwoSmallestNumbers([19, 5, 42, 2, 77]));
+
+
+var number = function(busStops){
+  let result = 0;
+  for (let i = 0; i < busStops.length; i++) {
+    result += busStops[i][0] - busStops[i][1];
+  }
+  return result;
+}
+
+console.log(number([[10,0],[3,5],[5,8]]));
