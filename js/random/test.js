@@ -67,3 +67,49 @@ var number = function(busStops){
 }
 
 console.log(number([[10,0],[3,5],[5,8]]));
+
+
+
+function isPrime(num) {
+  if (num < 2) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+console.log(isPrime84));
+
+function humanReadable(seconds) {
+  let hours = Math.floor(seconds / 3600);
+  let minutes = Math.floor((seconds % 3600) / 60);
+  let secs = seconds % 60;
+  return `${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+    
+}
+
+console.log(humanReadable(86399));
+
+
+const arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+function createPhoneNumber(numbers)
+{ 
+  let result = numbers.join("");
+  return `(${result.slice(0,3)}) ${result.slice(3, 6)}-${result.slice(6, 10)}`
+}
+
+console.log(createPhoneNumber(arr3))
+
+function createPhoneNumber2(numbers){
+  var format = "(xxx) xxx-xxxx";
+  
+  for(var i = 0; i < numbers.length; i++)
+  {
+    format = format.replace('x', numbers[i]);
+  }
+  
+  return format;
+}

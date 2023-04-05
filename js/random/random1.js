@@ -31,3 +31,11 @@ for (let z = 0; z < 5; z++) {
     }
 console.log(even);
 
+function lindedIn(str, str2) {
+  const firstName = "Marita";
+  const lastName = "Ifemeni";
+  const fullName = `${firstName} ${lastName}`;
+  let motto = "Let's make beautiful code together";
+  return `${str} ${fullName} ${str2} ${motto}`;
+}
+console.log(lindedIn("Hello, my name is", "and my motto is:"));
