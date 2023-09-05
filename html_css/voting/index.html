@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Food Voting!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Where to eat today!</h1>
+    </header>
+    <section>
+      <h2>Vote Restaurant:</h2>
+      <form action="#" method="post" id="voting-form">
+        <input type="radio" name="restaurant" id="hesburger-votes" value="hesburger-votes" />Hesburger<br />
+        <input type="radio" name="restaurant" id="mcdonalds-votes" value="mcdonalds-votes" />McDonalts<br />
+        <input type="radio" name="restaurant" id="kungfuband-votes" value="kungfuband-votes" />KungfuBand<br />
+        <input type="radio" name="restaurant" id="rax-votes" value="rax-votes" />Rax<br />
+        <input type="radio" name="restaurant" id="peppino-votes" value="peppino-votes" />Peppino<br />
+        <input type="submit" value="Vote!" />
+        
+      </form>
+    </section>
+
+    <section>
+        <h2>Voting Results:</h2>
+        <canvas id="voting-results" width="500" height="200"></canvas>
+        <div><button id="clear-results">Clear Results</button></div>
+      </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
